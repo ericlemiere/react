@@ -13,23 +13,31 @@
 }
 
 .app__navbar-logo {
-  display: flex;
+  display: inline-block;
   justify-content: flex-start;
   align-items: center;
+  margin-top: -.5rem;
+  margin-bottom: -1rem;
+  
+  //position: absolute;
 
   img {
-    width: 90px;
-    height: 20px;
+    width: 60px;
+    height: 60px;
 
     @media screen and (min-width: 2000px) {
-      width: 180px;
-      height: 40px;
+      width: 140px;
+      height: 140px;
+    }
+
+    @media screen and (max-width: 800px) {
+      margin-left: -1rem;
     }
   }
 }
 
 .app__navbar-links {
-  flex: 1;
+  //flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,7 +104,7 @@
         right: 0;
         z-index: 5;
         pad: 1rem;
-        width: 80%;
+        width: 50%;
         height: 100vh;
         display: flex;
         justify-content: flex-end;
@@ -154,3 +162,4 @@
         display: none;
     }
 }
+

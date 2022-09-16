@@ -35,7 +35,13 @@ import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 
-export default {
+import EL_round from '../assets/el-site-imgs/EL_round.png';
+import EL_blackBg from '../assets/el-site-imgs/E-L-blackBg.png';
+import astronaut2 from '../assets/el-site-imgs/astronaut2.png';
+import astronaut1 from '../assets/el-site-imgs/astronaut1.png';
+import astroComputer3 from '../assets/el-site-imgs/astro-computer3.png';
+
+const imageObj = {
   email,
   mobile,
   api,
@@ -69,4 +75,11 @@ export default {
   nb,
   skype,
   spotify,
+  EL_round,
+  EL_blackBg,
+  astronaut2,
+  astronaut1,
+  astroComputer3,
 };
+
+export default imageObj;
