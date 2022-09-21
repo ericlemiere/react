@@ -12,6 +12,7 @@ import notables from "./notables";
 import skills from "./skills";
 import workExperience from "./workExperience";
 import contact from "./contact";
+import education from "./education";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -28,6 +29,7 @@ export default createSchema({
     workExperience,
     experiences,
     contact,
-    notables
+    notables,
+    education,
   ]),
 });
