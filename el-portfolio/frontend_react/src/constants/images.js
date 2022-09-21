@@ -40,6 +40,13 @@ import EL_blackBg from '../assets/el-site-imgs/E-L-blackBg.png';
 import astronaut2 from '../assets/el-site-imgs/astronaut2.png';
 import astronaut1 from '../assets/el-site-imgs/astronaut1.png';
 import astroComputer3 from '../assets/el-site-imgs/astro-computer3.png';
+import iqIcon from '../assets/el-site-imgs/iq-icon.jpeg';
+import lcc from '../assets/el-site-imgs/LCC.jpeg';
+import msg from '../assets/el-site-imgs/msg.jpeg';
+import vinyl from '../assets/el-site-imgs/vinyl-record-icon.jpeg';
+import physics from '../assets/el-site-imgs/physics-icon.png';
+import techAcademy from '../assets/el-site-imgs/tech-academy.jpeg';
+
 
 const imageObj = {
   email,
@@ -80,6 +87,12 @@ const imageObj = {
   astronaut2,
   astronaut1,
   astroComputer3,
+  iqIcon,
+  lcc,
+  msg,
+  physics,
+  techAcademy,
+  vinyl,
 };
 
 export default imageObj;
