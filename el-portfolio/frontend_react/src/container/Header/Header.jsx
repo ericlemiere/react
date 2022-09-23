@@ -42,6 +42,20 @@ const Header = () => {
       </motion.div>
 
       <motion.div
+        whileInView={{  }}
+        transition={{ duration: 1.5  }}
+        className="app__header-myHead"
+      >
+        <motion.img
+          whileInView={{ opacity: [0, 1], x: [100, 0], y: [100, 0] }}
+          transition={{ duration: .4, delay: 1 }}
+          src={images.myHead}
+          alt="it's me"
+          className="myHead"
+        />
+      </motion.div>
+
+      <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"

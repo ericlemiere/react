@@ -2,37 +2,31 @@ import "./Skills.scss";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { AppWrap } from "../../wrapper";
+import { images } from "../../constants";
 import { urlFor, client } from "../../client";
 import { easeInOut } from "popmotion";
-import ReactToolTip from "react-tooltip";
+//import ReactToolTip from "react-tooltip";
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
-  const [experience, setExperience] = useState([]);
-  const [notables, setNotables] = useState([]);
+  //const [experience, setExperience] = useState([]);
 
   useEffect(() => {
     const skillsQuery = '*[_type == "skills"]';
-    const experienceQuery = '*[_type == "workExperience"]';
-    const notablesQuery = '*[_type == "notables"]';
-
-    client.fetch(experienceQuery).then((data) => {
-      setExperience(data);
-    });
-
     client.fetch(skillsQuery).then((data) => {
       setSkills(data);
     });
 
-    client.fetch(notablesQuery).then((data) => {
-      setNotables(data);
-    });
+    // const experienceQuery = '*[_type == "workExperience"]';
+    // client.fetch(experienceQuery).then((data) => {
+    //   setExperience(data);
+    // });
   }, []);
 
   return (
     <div>
       <h2 className="head-text">
-        <span>Skills</span> & <span>Experience</span>
+        <span>Skills</span> & <span>Education</span>
       </h2>
 
       <div className="app__skills-container">
@@ -56,15 +50,39 @@ const Skills = () => {
           ))}
         </motion.div>
 
-        <motion.div
-          whileInView={{ opacity: [0, 1] }}
-          transition={{ duration: 0.5 }}
-        >
-          <div>
-            <h2>Education</h2>
-            <p className="p-text">Words go here</p>
-          </div>
-        </motion.div>
+        <div>
+          <motion.div className="app__skills-ed">
+            <motion.div
+              whileInView={{ opacity: [0, 1] }}
+              transition={{ duration: 0.5 }}
+              className="app__skills-ed-item app__flex"
+            >
+              <h4 className="bold-text ed-h">Lower Columbia College</h4>
+              <p className="p-text ed-p">
+                Associates Degree - Computer Science <br></br> Associates Degree
+                - Mathematics <br></br> Associates Degree - General Studies
+              </p>
+              <div className="app__flex">
+                <img src={images.lcc} alt="LCC" />
+              </div>
+            </motion.div>
+          </motion.div>
+          <motion.div className="app__skills-ed">
+            <motion.div
+              whileInView={{ opacity: [0, 1] }}
+              transition={{ duration: 0.5 }}
+              className="app__skills-ed-item app__flex"
+            >
+              <h4 className="bold-text ed-h">The Tech Academy</h4>
+              <p className="p-text ed-p">
+                Full-Stack Software Developer Bootcamp
+              </p>
+              <div className="app__flex">
+                <img src={images.techAcademy} alt="Tech Academy" />
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
 
         {/* <motion.div className='app__skills-exp'>
             {experience?.map((exp) => (
@@ -91,34 +109,8 @@ const Skills = () => {
             ))}
         </motion.div> */}
       </div>
-
-      <h2 className="head-text">
-        Notable <span>Acheivements</span>
-      </h2>
-      <p className="p-text app__flex">
-        I hate "bragging" about myself, but I <i>&nbsp;am&nbsp;</i> trying to get hired! 😁
-      </p>
-      <div className="app__skills-container app__flex">
-        <motion.div className="app__notables">
-          {notables.map((notable) => (
-            <motion.div
-              whileInView={{ opacity: [0, 1] }}
-              whileHover={{ scale: [1, 1.03] }}
-              transition={{ duration: 0.5 }}
-              className="app__notables-item app__flex"
-              key={notable.title}
-            >
-              <div className="app__flex">
-                <img src={urlFor(notable.icon)} alt={notable.title} />
-              </div>
-              <h4>{notable.title}</h4>
-              <p className="p-text notables-desc">{notable.desc}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
     </div>
   );
 };
 
-export default Skills;
+export default AppWrap(Skills, "skills");
