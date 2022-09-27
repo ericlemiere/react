@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { images } from "../../constants";
 import AppWrap from "../../wrapper/AppWrap";
 
-
 const scaleVariants = {
   whileInView: {
     scale: [0, 1],
@@ -15,7 +14,6 @@ const scaleVariants = {
     },
   },
 };
-
 
 const Header = () => {
   return (
@@ -42,13 +40,13 @@ const Header = () => {
       </motion.div>
 
       <motion.div
-        whileInView={{  }}
-        transition={{ duration: 1.5  }}
+        whileInView={{}}
+        transition={{ duration: 1.5 }}
         className="app__header-myHead"
       >
         <motion.img
           whileInView={{ opacity: [0, 1], x: [100, 0], y: [100, 0] }}
-          transition={{ duration: .4, delay: 1 }}
+          transition={{ duration: 0.5, delay: 1 }}
           src={images.myHead}
           alt="it's me"
           className="myHead"
@@ -60,9 +58,14 @@ const Header = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
       >
-        <img src={images.astronaut1} alt="profile_bg" />
         <motion.img
-          whileInView={{ scale: [6, 1] }}
+          whileInView={{ y: [-300, 0]  }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          src={images.astronaut1}
+          alt="profile_bg"
+        ></motion.img>
+        <motion.img
+          whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: "easeInOut" }}
           src={images.circle}
           alt="profile_circle"
@@ -75,15 +78,20 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         className="app__header-circles"
       >
-        {[images.html, images.javascript, images.css, images.react, images.python].map((circle, index) => (
+        {[
+          images.html,
+          images.javascript,
+          images.css,
+          images.react,
+          images.python,
+        ].map((circle, index) => (
           <div className="circle-cmp app__flex" key={`circle-${index}`}>
             <img src={circle} alt="profile_bg" />
           </div>
         ))}
       </motion.div>
-
     </div>
   );
 };
 
-export default AppWrap(Header, 'home');
+export default AppWrap(Header, "home");

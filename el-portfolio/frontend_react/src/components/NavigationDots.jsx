@@ -4,14 +4,14 @@ import "./NavigationDots.scss";
 const NavigationDots = ({ active }) => {
   return (
     <div className="app__navigation">
-      {["home", "about", "portfolio", "skills", "notables", "testimonials", "contact"].map(
+      {["home", "about", "portfolio", "skills", "notables","contact"].map(
         (item, index) => (
           <a
             href={`#${item}`}
             key={item + index}
             className="app__navigation-dot"
             style={active === item ? { backgroundColor: "#313BAC" } : {}}
-          ></a>
+          > </a>
         )
       )}
     </div>

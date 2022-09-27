@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./About.scss";
 import { motion } from "framer-motion";
 import AppWrap from "../../wrapper/AppWrap";
-//import { images } from "../../constants";
 import { urlFor, client } from "../../client";
 
 const About = () => {
@@ -19,7 +18,7 @@ const About = () => {
  
 
   return (
-    <div>
+    <div className="about-container">
       <h2 className="head-text">
         Combining<span> Artistry</span>
         <br />

@@ -16,15 +16,14 @@ const Notables = () => {
   }, []);
 
   return (
-    <div>
+    <div className="app__notables-container">
       <h2 className="head-text">
         Notable <span>Acheivements</span>
       </h2>
       <p className="p-text app__flex">
-        I hate "bragging" about myself, but I <i>&nbsp;am&nbsp;</i> trying to
-        get hired! 😁
+        I hate "bragging" about myself, but I am trying to get hired! 😁
       </p>
-      <div className="app__skills-container app__flex">
+      <div className="">
         <motion.div className="app__notables">
           {notables.map((notable) => (
             <motion.div
@@ -37,8 +36,10 @@ const Notables = () => {
               <div className="app__flex">
                 <img src={urlFor(notable.icon)} alt={notable.title} />
               </div>
-              <h4>{notable.title}</h4>
-              <p className="p-text notables-desc">{notable.desc}</p>
+              <div className="notables-desc">
+                <h4>{notable.title}</h4>
+                <p>{notable.desc}</p>
+              </div>
             </motion.div>
           ))}
         </motion.div>
@@ -47,4 +48,4 @@ const Notables = () => {
   );
 };
 
-export default AppWrap(Notables, 'notables');
+export default AppWrap(Notables, "notables");

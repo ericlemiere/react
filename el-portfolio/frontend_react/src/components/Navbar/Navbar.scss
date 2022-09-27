@@ -1,7 +1,6 @@
 .app__navbar {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   background: rgba($color: white, $alpha: 0.25);
@@ -42,6 +41,8 @@
   justify-content: center;
   align-items: center;
   list-style: none;
+  position: absolute;
+  right: 0;
 
   li {
     margin: 0 1rem;
@@ -85,7 +86,8 @@
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    position: relative;
+    position: absolute;
+    right: 3vw;
     display: flex;
     justify-content: center;
     align-items: center;

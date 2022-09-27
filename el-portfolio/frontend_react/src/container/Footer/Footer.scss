@@ -1,0 +1,127 @@
+.app__footer {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+}
+
+h2 {
+  margin-top: 40px;
+}
+
+.app__footer-cards {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //flex-wrap: wrap-reverse;
+  margin: auto;
+  margin-bottom: 40px;
+
+  .app__footer-card {
+    min-width: 290px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+    padding-left: 2.8rem;
+    cursor: pointer;
+    background-color: rgb(194, 221, 255);
+
+    transform: all 0.3s ease-in-out;
+
+    img {
+      width: 40px;
+      height: 40px;
+      margin: 0 0.7rem;
+    }
+
+    p {
+      font-weight: 600;
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    &:hover {
+      box-shadow: 0 0 25px rgb(220, 220, 220);
+    }
+
+    @media screen and (max-width: 450px) {
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.app__footer-cards .app__footer-card:last-child {
+  background-color: rgb(218, 233, 251);
+}
+
+.app__footer-form {
+  width: 100%;
+  flex-direction: column;
+  margin: 1rem 2rem;
+
+  div {
+    width: 100%;
+    margin: 0.75rem 0;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+
+    transform: all 0.3s ease-in-out;
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.95rem;
+      border: none;
+      border-radius: 7px;
+      background-color: rgb(194, 221, 255);
+      font-family: var(--font-base);
+      outline: none;
+    }
+
+    textarea {
+      height: 170px;
+    }
+    
+    &:hover {
+      box-shadow: 0 0 25px rgb(220, 220, 220);
+    }
+  }
+
+  button {
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--secondary-color);
+    font-weight: 500;
+    color: white;
+    outline: none;
+    margin-top: 2rem;
+    font-family: var(--font-base);
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 0 25px rgb(220, 220, 220);
+        background-color: rgb(54, 136, 207);
+      }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+
+#bottomSpace {
+  margin-bottom: 40px;
+}

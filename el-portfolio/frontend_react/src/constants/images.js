@@ -43,6 +43,8 @@ import astroComputer3 from '../assets/el-site-imgs/astro-computer3.png';
 import lcc from '../assets/el-site-imgs/LCC.jpeg';
 import techAcademy from '../assets/el-site-imgs/tech-academy.jpeg';
 import myHead from '../assets/el-site-imgs/myHead.png';
+import aboutreact from '../assets/el-site-imgs/aboutreact.png';
+import aboutlaptop from '../assets/el-site-imgs/aboutlaptop.png';
 
 
 const imageObj = {
@@ -87,6 +89,8 @@ const imageObj = {
   lcc,
   techAcademy,
   myHead,
+  aboutreact,
+  aboutlaptop,
 };
 
 export default imageObj;

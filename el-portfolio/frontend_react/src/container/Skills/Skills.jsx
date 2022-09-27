@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { AppWrap } from "../../wrapper";
 import { images } from "../../constants";
 import { urlFor, client } from "../../client";
-import { easeInOut } from "popmotion";
+//import { easeInOut } from "popmotion";
 //import ReactToolTip from "react-tooltip";
 
 const Skills = () => {
@@ -24,7 +24,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <div>
+    <div className="app__skills">
       <h2 className="head-text">
         <span>Skills</span> & <span>Education</span>
       </h2>
@@ -50,20 +50,33 @@ const Skills = () => {
           ))}
         </motion.div>
 
-        <div>
+        <div className="ed-section">
           <motion.div className="app__skills-ed">
             <motion.div
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
-              className="app__skills-ed-item app__flex"
+              className="app__skills-ed-item "
             >
-              <h4 className="bold-text ed-h">Lower Columbia College</h4>
-              <p className="p-text ed-p">
-                Associates Degree - Computer Science <br></br> Associates Degree
-                - Mathematics <br></br> Associates Degree - General Studies
-              </p>
-              <div className="app__flex">
-                <img src={images.lcc} alt="LCC" />
+              <div className="img-school">
+                <a
+                  href="https://www.learncodinganywhere.com/codingbootcamps"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <motion.img
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ duration: 0.5 }}
+                    whileHover={{ scale: [1, 1.03] }}
+                    src={images.techAcademy}
+                    alt="Tech Academy"
+                  ></motion.img>
+                </a>
+              </div>
+              <div className="ed-description">
+                <h4 className="bold-text ">The Tech Academy</h4>
+                <p className="p-text ">
+                  Full-Stack Software Developer Bootcamp
+                </p>
               </div>
             </motion.div>
           </motion.div>
@@ -71,14 +84,29 @@ const Skills = () => {
             <motion.div
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
-              className="app__skills-ed-item app__flex"
+              className="app__skills-ed-item "
             >
-              <h4 className="bold-text ed-h">The Tech Academy</h4>
-              <p className="p-text ed-p">
-                Full-Stack Software Developer Bootcamp
-              </p>
-              <div className="app__flex">
-                <img src={images.techAcademy} alt="Tech Academy" />
+              <div className="img-school">
+                <a
+                  href="www.lowercolumbia.edu"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <motion.img
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ duration: 0.5 }}
+                    whileHover={{ scale: [1, 1.03] }}
+                    src={images.lcc}
+                    alt="LCC"
+                  ></motion.img>
+                </a>
+              </div>
+              <div className="ed-description">
+                <h4 className="bold-text ed-h">Lower Columbia College</h4>
+                <p className="p-text ed-p">
+                  AS - Computer Science <br></br> AA - Mathematics <br></br> AA
+                  - General Studies
+                </p>
               </div>
             </motion.div>
           </motion.div>

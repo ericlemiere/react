@@ -1,31 +1,52 @@
 
-.app__notables {
+.app__skills-container {
   flex: 1;
-  //display: flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
 
-  h4 {
-    margin: 0 2rem;
-    width: 20%;
-    text-align: left;
+  @media screen and (max-width: 900px) {
+    display: block;
   }
+  
+}
+
+.app__notables {
+  //flex: 1;
+  //display: flex;
+  justify-content: center;
+  align-items: center;
 
   .notables-desc {
-    width: 30%;
+    width: 80%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    text-align: left;
+    color: var(--gray-color);
+    margin: 0rem 0rem;
+
+    @media screen and (min-width: 900px) {
+      margin-left: 2rem;
+    }
   }
 
   @media screen and (max-width: 900px) {
     justify-content: center;
     align-items: center;
   }
+  @media screen and (max-width: 450px) {
+    padding: 2rem;
+  }
+  
 }
 
 .app__notables-item {
   flex-direction: row;
   text-align: center;
-  margin: 1rem 0rem;
+  margin: 1.5rem 0rem;
   transition: all 0.3s ease-out;
 
   div {
@@ -38,14 +59,15 @@
       height: 100%;
       object-fit: cover;
       border-radius: 50%;
+      margin-right: 2rem;
 
       &:hover {
         box-shadow: 0 0 25px lightgrey;
       }
 
       @media screen and (max-width: 900px) {
-        width: 90%;
-        height: 90%;
+        width: 3rem;
+        height: 3rem;
       }
     }
 
@@ -55,7 +77,6 @@
     }
     @media screen and (max-width: 2000px) {
       width: 70px;
-      height: 70px;
     }
   }
 
@@ -73,3 +94,5 @@
     }
   }
 }
+
+
