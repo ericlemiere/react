@@ -1,15 +1,45 @@
-
 .app__skills-container {
   flex: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
+  width: 100%;
 
   @media screen and (max-width: 900px) {
     display: block;
   }
-  
+}
+
+.app__notables-container {
+  height: 100vh;
+
+  #notableP2 {
+    display: none;
+  }
+  @media screen and (max-width: 450px) {
+    text-align: center;
+    padding: 0rem 0rem;
+
+    #notableP1 {
+      display: none;
+    }
+    #notableP2 {
+      display: flex;
+    }
+  }
+
+  h2 {
+    padding-top: 5rem;
+    @media screen and (max-width: 600px) {
+      padding: 5rem 3rem 0rem 3rem;
+    }
+  }
+  .notables-heading {
+    padding-top: 0;
+    margin-top: 0;
+    
+  }
 }
 
 .app__notables {
@@ -17,6 +47,7 @@
   //display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 2rem;
 
   .notables-desc {
     width: 80%;
@@ -33,6 +64,15 @@
     }
   }
 
+  @media screen and (min-width: 950px) {
+    width: 80%;
+    margin: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 70%;
+    margin: auto;
+  }
+
   @media screen and (max-width: 900px) {
     justify-content: center;
     align-items: center;
@@ -40,7 +80,6 @@
   @media screen and (max-width: 450px) {
     padding: 2rem;
   }
-  
 }
 
 .app__notables-item {
@@ -94,5 +133,3 @@
     }
   }
 }
-
-

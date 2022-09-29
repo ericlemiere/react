@@ -1,7 +1,8 @@
 import "./Skills.scss";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { AppWrap } from "../../wrapper";
+//import { AppWrap } from "../../wrapper";
+import MotionWrap from "../../wrapper/MotionWrap";
 import { images } from "../../constants";
 import { urlFor, client } from "../../client";
 //import { easeInOut } from "popmotion";
@@ -24,7 +25,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <div className="app__skills">
+    <div className="app__skills" id="skills">
       <h2 className="head-text">
         <span>Skills</span> & <span>Education</span>
       </h2>
@@ -49,7 +50,8 @@ const Skills = () => {
             </motion.div>
           ))}
         </motion.div>
-
+      </div>
+      <div className="app__skills-container2">
         <div className="ed-section">
           <motion.div className="app__skills-ed">
             <motion.div
@@ -111,7 +113,6 @@ const Skills = () => {
             </motion.div>
           </motion.div>
         </div>
-
         {/* <motion.div className='app__skills-exp'>
             {experience?.map((exp) => (
               <React.Fragment key={exp.name}>
@@ -141,4 +142,4 @@ const Skills = () => {
   );
 };
 
-export default AppWrap(Skills, "skills");
+export default MotionWrap(Skills, 'app__skills')

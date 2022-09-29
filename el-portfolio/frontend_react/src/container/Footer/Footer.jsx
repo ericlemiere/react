@@ -1,43 +1,43 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Footer.scss";
-import { AppWrap } from "../../wrapper";
-import { client } from "../../client";
+//import { AppWrap } from "../../wrapper";
+//import { client } from "../../client";
 import { images } from "../../constants";
-import { SocialMedia } from "../../components";
+import MotionWrap from "../../wrapper/MotionWrap";
 
 const Footer = () => {
-  const [formData, setformData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [isFormSubmitted, setisFormSubmitted] = useState(false);
-  const [loading, setloading] = useState(false);
+  // const [formData, setformData] = useState({
+  //   name: "",
+  //   email: "",
+  //   message: "",
+  // });
+  // const [isFormSubmitted, setisFormSubmitted] = useState(false);
+  // const [loading, setloading] = useState(false);
 
-  const { name, email, message } = formData;
-  const handleChangeInput = (e) => {
-    const { name, value } = e.target;
-    setformData({ ...formData, [name]: value });
-  };
+  // const { name, email, message } = formData;
+  // const handleChangeInput = (e) => {
+  //   const { name, value } = e.target;
+  //   setformData({ ...formData, [name]: value });
+  // };
 
-  const handleSubmit = () => {
-    setloading(true);
+  // const handleSubmit = () => {
+  //   setloading(true);
 
-    const contact = {
-      _type: "contact",
-      name: formData.name,
-      email: formData.email,
-      message: formData.message,
-    };
+  //   const contact = {
+  //     _type: "contact",
+  //     name: formData.name,
+  //     email: formData.email,
+  //     message: formData.message,
+  //   };
 
-    client
-      .create(contact)
-      .then(() => {
-        setloading(false);
-        setisFormSubmitted(true);
-      })
-      .catch((err) => console.log(err));
-  };
+  //   client
+  //     .create(contact)
+  //     .then(() => {
+  //       setloading(false);
+  //       setisFormSubmitted(true);
+  //     })
+  //     .catch((err) => console.log(err));
+  // };
 
   return (
     <>
@@ -101,4 +101,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default MotionWrap(Footer, 'app__footer')

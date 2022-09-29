@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./Portfolio.scss";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
-import { AppWrap } from "../../wrapper";
+//import { AppWrap } from "../../wrapper";
+import MotionWrap from "../../wrapper/MotionWrap";
 import { urlFor, client } from "../../client";
 import { easeInOut } from "popmotion";
 
@@ -33,7 +34,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="app__works">
+    <div className="app__works" id="portfolio">
       <h2 className="head-text">
         <span>Portfolio</span>
       </h2>
@@ -114,4 +115,4 @@ const Portfolio = () => {
   );
 };
 
-export default AppWrap(Portfolio, "portfolio");
+export default MotionWrap(Portfolio, 'app__portfolio')

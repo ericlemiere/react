@@ -1,7 +1,8 @@
 import "./Notables.scss";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { AppWrap } from "../../wrapper";
+//import { AppWrap } from "../../wrapper";
+import MotionWrap from "../../wrapper/MotionWrap";
 import { urlFor, client } from "../../client";
 
 const Notables = () => {
@@ -16,13 +17,18 @@ const Notables = () => {
   }, []);
 
   return (
-    <div className="app__notables-container">
-      <h2 className="head-text">
-        Notable <span>Acheivements</span>
-      </h2>
-      <p className="p-text app__flex">
+    <div className="app__notables-container" id="notables">
+      <h2 className="head-text">Notable <span>Achievements</span></h2>
+      
+      <p className="p-text app__flex" id="notableP1">
         I hate "bragging" about myself, but I am trying to get hired! 😁
       </p>
+      <p className="p-text app__flex" id="notableP2">
+        I hate "bragging" about myself,
+        <br />
+        but I am trying to get hired! 😁
+      </p>
+
       <div className="">
         <motion.div className="app__notables">
           {notables.map((notable) => (
@@ -48,4 +54,4 @@ const Notables = () => {
   );
 };
 
-export default AppWrap(Notables, "notables");
+export default MotionWrap(Notables, 'app__notables')

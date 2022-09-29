@@ -2,12 +2,13 @@
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0rem 0rem;
   background: rgba($color: white, $alpha: 0.25);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba($color: white, $alpha: 0.18);
   position: fixed;
+  top: 0;
   z-index: 2;
 }
 
@@ -15,10 +16,7 @@
   display: inline-block;
   justify-content: flex-start;
   align-items: center;
-  margin-top: -.5rem;
-  margin-bottom: -1rem;
-  
-  //position: absolute;
+  padding: .4rem;
 
   img {
     width: 60px;
@@ -30,7 +28,7 @@
     }
 
     @media screen and (max-width: 800px) {
-      margin-left: -1rem;
+      //margin-left: -1rem;
     }
   }
 }
@@ -42,7 +40,7 @@
   align-items: center;
   list-style: none;
   position: absolute;
-  right: 0;
+  right: 2%;
 
   li {
     margin: 0 1rem;

@@ -9,7 +9,9 @@ const Navbar = () => {
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
+        <a href="#home">
         <img src={images.EL_blackBg} alt="logo"></img>
+        </a>
       </div>
       <ul className="app__navbar-links">
         {["home", "about", "portfolio", "skills", "notables", "contact"].map((item) => (

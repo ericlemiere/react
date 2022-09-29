@@ -2,7 +2,8 @@ import React from "react";
 import "./Header.scss";
 import { motion } from "framer-motion";
 import { images } from "../../constants";
-import AppWrap from "../../wrapper/AppWrap";
+//import AppWrap from "../../wrapper/AppWrap";
+import MotionWrap from "../../wrapper/MotionWrap";
 
 const scaleVariants = {
   whileInView: {
@@ -45,8 +46,8 @@ const Header = () => {
         className="app__header-myHead"
       >
         <motion.img
-          whileInView={{ opacity: [0, 1], x: [100, 0], y: [100, 0] }}
-          transition={{ duration: 0.5, delay: 1 }}
+          animate={{ x: [200, 0], y: [200, 0] }}
+          transition={{ duration: 0.6, delay: 1 }}
           src={images.myHead}
           alt="it's me"
           className="myHead"
@@ -94,4 +95,4 @@ const Header = () => {
   );
 };
 
-export default AppWrap(Header, "home");
+export default MotionWrap(Header, 'app__header')

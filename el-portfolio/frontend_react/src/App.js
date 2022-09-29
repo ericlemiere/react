@@ -1,13 +1,23 @@
-import React from 'react';
-//import { AppWrap } from './wrapper';
+import React from "react";
+import { AppWrap } from "./wrapper";
 
-import { About, Footer, Header, Skills, Portfolio, Notables } from './container';
-import { Navbar } from './components';
-import './App.scss';
+import {
+  About,
+  Footer,
+  Header,
+  Skills,
+  Portfolio,
+  Notables,
+} from "./container";
+import { Navbar, NavigationDots, SocialMedia } from "./components";
+import "./App.scss";
 
 const App = () => {
+
+
+
   return (
-    <div className='app'>
+    <div className="app" id="home">
       <Navbar />
       <Header />
       <About />
@@ -16,9 +26,10 @@ const App = () => {
       <Notables />
       {/* <Testimonials /> */}
       <Footer />
+      <NavigationDots />
+      <SocialMedia />
     </div>
-
-  )
+  );
 };
 
-export default App
+export default App;
