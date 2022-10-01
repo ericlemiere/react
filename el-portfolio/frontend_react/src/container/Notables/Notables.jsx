@@ -9,7 +9,7 @@ const Notables = () => {
   const [notables, setNotables] = useState([]);
 
   useEffect(() => {
-    const notablesQuery = '*[_type == "notables"]';
+    const notablesQuery = '*[_type == "notables"] | order(order asc)';
 
     client.fetch(notablesQuery).then((data) => {
       setNotables(data);

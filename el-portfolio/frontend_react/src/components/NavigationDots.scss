@@ -15,29 +15,44 @@
     width: 20px;
     height: 20px;
   }
+  @media screen and (max-width: 450px) {
+    display: none;
+  }
 }
 
 .app__navigation-dot-active {
-  background-color: rgb(85, 106, 128);
+  background-color: var(--secondary-color);
   transition: all 0.5s ease-in-out;
 
-  -webkit-animation: pulse 1s infinite; /* Safari 4+ */
-  -moz-animation: pulse 1s infinite; /* Fx 5+ */
-  -o-animation: pulse 1s infinite; /* Opera 12+ */
-  animation: pulse 1s infinite; /* IE 10+, Fx 29+ */
+  -webkit-animation: pulse 2s infinite; /* Safari 4+ */
+  -moz-animation: pulse 2s infinite; /* Fx 5+ */
+  -o-animation: pulse 2s infinite; /* Opera 12+ */
+  animation: pulse 2s infinite; /* IE 10+, Fx 29+ */
 }
 
 @keyframes pulse {
   0% {
-    background-color: #cbcbcb;
+    //background-color: #cbcbcb;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0);
   }
   50% {
-    background-color: var(--secondary-color);
+    //background-color: var(--secondary-color);
     box-shadow: 0 0 4px var(--secondary-color);
   }
   100% {
-    background-color: #cbcbcb;
+    //background-color: #cbcbcb;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0);
   }
+}
+
+
+.hideNavDots {
+  opacity: 0;
+  pointer-events: none;
+  transition: all .3s ease-in-out;
+}
+.showNavDots {
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 1s ease-in-out;
 }

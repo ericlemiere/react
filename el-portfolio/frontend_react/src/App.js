@@ -1,5 +1,5 @@
 import React from "react";
-import { AppWrap } from "./wrapper";
+//import { AppWrap } from "./wrapper";
 
 import {
   About,

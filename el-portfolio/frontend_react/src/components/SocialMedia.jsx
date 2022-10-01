@@ -2,7 +2,7 @@ import React from "react";
 import { BsInstagram, BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaMusic } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
-import { images } from "../constants";
+//import { images } from "../constants";
 import "./SocialMedia.scss";
 
 const SocialMedia = () => {
