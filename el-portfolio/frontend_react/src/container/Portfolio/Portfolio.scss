@@ -111,8 +111,19 @@
     height: 100%;
     background-color: rgba(0,0,0,0.5);
     border-radius: .5rem;
-    opacity: 0;
-    transition: all .2s ease;
+    transition: all .5s ease;
+
+    @media screen and (min-width: 920px) {
+      opacity: 0;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    @media screen and (max-width: 919px) {
+      opacity: 1;
+    }
+
+    
 
     div {
         width: 50px;
@@ -129,7 +140,7 @@
 
     svg {
         width: 50%;
-        height: 50%;
+        height: 50%; 
         color: black;
     }
 }

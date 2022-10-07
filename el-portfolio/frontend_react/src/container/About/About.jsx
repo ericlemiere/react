@@ -29,9 +29,9 @@ const About = () => {
       <div className="app__profiles">
         {abouts.map((about, index) => (
           <motion.div
-            whileInView={{ opacity: 1 }}
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.5, type: "tween" }}
+            whileInView={{ opacity: [0,1] }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.7, type: "tween" }}
             className="app__profile-item"
             key={index}
           >

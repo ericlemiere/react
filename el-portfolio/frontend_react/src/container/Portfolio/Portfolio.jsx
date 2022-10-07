@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Portfolio.scss";
-import { AiFillEye, AiFillGithub } from "react-icons/ai";
+import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 import { motion } from "framer-motion";
 //import { AppWrap } from "../../wrapper";
 import MotionWrap from "../../wrapper/MotionWrap";
 import { urlFor, client } from "../../client";
-import { easeInOut } from "popmotion";
+//import { easeInOut } from "popmotion";
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -66,31 +66,31 @@ const Portfolio = () => {
               <img src={urlFor(work.imgUrl)} alt={work.name} />
 
               <motion.div
-                whileHover={{ opacity: [0, 1] }}
-                transition={{
-                  duration: 0.25,
-                  ease: easeInOut,
-                  staggerChildren: 0.5,
-                }}
+                // whileHover={{ opacity: [0, 1] }}
+                // transition={{
+                //   duration: 0.25,
+                //   ease: easeInOut,
+                //   staggerChildren: 0.5,
+                // }}
                 className="app__work-hover app__flex"
               >
                 <a href={work.projectLink} target="_blank" rel="noreferrer">
                   {work.projectLink != null && (
                     <motion.div
-                      whileInView={{ scale: [0.7, 1] }}
-                      whileHover={{ scale: [1, 0.9] }}
-                      transition={{ duration: 0.1 }}
+                      whileInView={{ scale: [0.5, 1] }}
+                      whileHover={{ scale: [1, 1.05] }}
+                      transition={{ duration: .5 }}
                       className="app__flex"
                     >
-                      <AiFillEye />
+                      <AiOutlineLink />
                     </motion.div>
                   )}
                 </a>
                 <a href={work.codeLink} target="_blank" rel="noreferrer">
                   <motion.div
-                    whileInView={{ scale: [0.7, 1] }}
-                    whileHover={{ scale: [1, 0.9] }}
-                    transition={{ duration: 0.1 }}
+                    whileInView={{ scale: [0.5, 1] }}
+                    whileHover={{ scale: [1, 1.05] }}
+                    transition={{ duration: .7 }}
                     className="app__flex"
                   >
                     <AiFillGithub />

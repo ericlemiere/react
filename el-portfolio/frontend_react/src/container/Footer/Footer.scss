@@ -4,6 +4,9 @@
   height: 50vh;
   flex-direction: column;
   margin-top: 4rem;
+  @media screen and (max-width: 450px) {
+    margin-top: 0;
+  }
 }
 
 .app__footer-cards {
@@ -14,6 +17,7 @@
   //flex-wrap: wrap-reverse;
   margin: auto;
   margin-bottom: 40px;
+  margin-top: 40px;
 
   .app__footer-card {
     min-width: 290px;
