@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+//import { useRef } from "react";
 //import { useEffect } from "react";
 import "./NavigationDots.scss";
 import ReactToolTip from "react-tooltip";
@@ -19,6 +20,7 @@ const NavigationDots = ({ active }) => {
   //     window.removeEventListener("scroll", handleScroll);
   //   };
   // }, []);
+
 
   const [isToolTipMounted, setIsToolTipMounted] = useState(true);
 

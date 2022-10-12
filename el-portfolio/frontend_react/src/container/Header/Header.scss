@@ -27,7 +27,7 @@
   padding: 3rem 0rem 0;
 
   @media screen and (min-width: 2000px) {
-    padding-top: 8rem;
+    //padding-top: 8rem;
   }
 
   @media screen and (max-width: 1200px) {
@@ -160,9 +160,8 @@
 
   @media screen and (min-width: 2000px) {
     div:nth-child(1) {
-      width: 400px;
-      height: 400px;
-      padding: 14rem;
+      width: 210px;
+      height: 210px;
     }
     div:nth-child(2) {
       width: 170px;

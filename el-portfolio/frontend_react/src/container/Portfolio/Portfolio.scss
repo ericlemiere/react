@@ -162,5 +162,8 @@
         border-radius: 10px;
         background-color: white;
         top: -25px;
+        @media screen and (min-width: 2000px) {
+          top: -45px;
+        }
     }
 }

@@ -4,9 +4,29 @@ import { motion } from "framer-motion";
 //import { AppWrap } from "../../wrapper";
 import MotionWrap from "../../wrapper/MotionWrap";
 import { urlFor, client } from "../../client";
+import { useRef } from "react";
 
 const Notables = () => {
   const [notables, setNotables] = useState([]);
+
+  const pageRef = useRef();
+  const [yCoord, setYCoord] = useState();
+
+  const getPosition = () => {
+    const y = pageRef.current?.offsetTop;
+    setYCoord(y);
+  };
+
+  useEffect(() => {
+    getPosition();
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", getPosition);
+    return () => {
+      window.removeEventListener("scroll", getPosition);
+    };
+  }, []);
 
   useEffect(() => {
     const notablesQuery = '*[_type == "notables"] | order(order asc)';
@@ -17,7 +37,7 @@ const Notables = () => {
   }, []);
 
   return (
-    <div className="app__notables-container" id="notables">
+    <div className="app__notables-container" id="notables" ref={pageRef}>
       <h2 className="head-text">Notable <span>Achievements</span></h2>
       
       <p className="p-text app__flex" id="notableP1">

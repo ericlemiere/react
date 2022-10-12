@@ -32,6 +32,9 @@
     width: 100%;
     flex-direction: column;
   }
+  @media screen and (min-width: 2000px) {
+    margin-top: 8rem;
+  }
 }
 
 .app__skills-list {
@@ -189,6 +192,9 @@
 
   p {
     width: 300px;
+    @media screen and (min-width: 2000px) {
+      width: 450px;
+    }
   }
 
   @media screen and (max-width: 900px) {
